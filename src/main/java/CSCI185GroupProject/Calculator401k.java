@@ -48,7 +48,6 @@ public class Calculator401k
     public void progressNext()
     {
         double employeeContribution = employeeSalary * 0.01 * employeeContributionPercentage;
-        currentBalance += employeeContribution;
-
+        double employerContrubition = 0;
     }
 }
