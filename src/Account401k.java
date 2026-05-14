@@ -39,18 +39,26 @@ public class Account401k extends Account {
         this.marginalTaxRate = marginalTaxRate;
     }
 
+    //calculate() and calculateTraditional() are the exact same functions
     public RetirementResult calculate() throws InvalidInputException {
         return calculateTraditional();
     }
 
+    //calculateTradtional() tells you what you would have in your account if you went for a traditional 401k Account
     public RetirementResult calculateTraditional() throws InvalidInputException {
         return calculatePlan("Traditional 401k Estimate", false);
     }
 
+    //calculateRoth() tells you what you would have in your account if you went for a Roth 401k Account
     public RetirementResult calculateRoth() throws InvalidInputException {
         return calculatePlan("Roth 401k Estimate", true);
     }
 
+    /*
+    It appears that this function calculates what your 401k Account would have year-by-year, 
+    showing both the amount you contributed, the amount in the 401k Account with employer match, 
+    and the amount in the 401k Account without employer match
+    */
     private RetirementResult calculatePlan(String planName, boolean rothPlan) throws InvalidInputException {
 
         checkBasicInputs();
