@@ -13,6 +13,7 @@ public abstract class Account implements RetirementAccount {
     private int currentAge;
     private int retirementAge;
     private double expectedReturnRate;
+    //In this case, expectedReturnRate is the percentage of which the account's value is expected to increase by
 
     public Account(double startingBalance, int currentAge, int retirementAge, double expectedReturnRate) {
         this.startingBalance = startingBalance;
