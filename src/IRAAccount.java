@@ -39,6 +39,10 @@ public class IRAAccount extends Account {
         return calculatePlan("Roth IRA Estimate", true);
     }
 
+    /*
+    It appears that this function calculates what your IRA Account would have year-by-year,
+    showing both the amount you contributed, and the amount in your IRA
+    */
     private RetirementResult calculatePlan(String planName, boolean rothPlan) throws InvalidInputException {
 
         checkBasicInputs();
@@ -64,6 +68,7 @@ public class IRAAccount extends Account {
         double balance = getStartingBalance();
         double totalEmployee = 0;
         double totalTaxPaid = 0;
+        //totalEmployee in this case is short for totalEmployeeContribution
 
         double[] balances = new double[years + 1];
         double[] employeeContributions = new double[years + 1];

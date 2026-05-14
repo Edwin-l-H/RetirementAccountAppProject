@@ -42,6 +42,7 @@ public abstract class Account implements RetirementAccount {
         return retirementAge - currentAge;
     }
 
+    //Checks if the inputs makes logical sense for someone who would be in a position to consider retirement savings
     public void checkBasicInputs() throws InvalidInputException {
         if (startingBalance < 0) {
             throw new InvalidInputException("You need to re-evaluate your current situation if your starting balance is negative.");

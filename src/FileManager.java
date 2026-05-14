@@ -38,6 +38,7 @@ public class FileManager {
         writer.close();
     }
 
+
     public static void saveComponentImage(Component component, String fileName) throws IOException {
 
         BufferedImage image = new BufferedImage(component.getWidth(), component.getHeight(), BufferedImage.TYPE_INT_RGB);
